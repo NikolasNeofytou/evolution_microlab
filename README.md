@@ -12,7 +12,9 @@ A clean, modern, and extensible 8085 lab simulator designed for teaching and sel
 - `ui-web` – Web/PWA interface.
 - `assets` – Icons, themes, and sample programs.
 - `labs` – Lab templates and tests.
+
 - `docs` – User and teacher guides.
+
 - `tests` – Unit and integration tests.
 
 ## Building
@@ -45,9 +47,16 @@ To run the browser-based interface during development:
 dotnet run --project ui-web
 ```
 
+
+## Documentation
+
+- [User Guide](docs/user.md) – building the project and interacting with the CLI and UIs
+- [Developer Guide](docs/developer.md) – architecture overview and contribution workflow
+
 ## Peripherals
 
-The simulator includes a pluggable bus for external devices. The initial implementation provides an Intel 8255 PPI that can
-be mapped to I/O ports for simple LED, switch, or seven‑segment display experiments.
+The simulator includes a pluggable bus for external devices. The initial implementation provides an Intel 8255 PPI that can be mapped to I/O ports for simple LED, switch, or seven‑segment display experiments.
 
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 

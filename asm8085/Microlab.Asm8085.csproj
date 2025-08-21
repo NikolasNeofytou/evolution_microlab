@@ -11,6 +11,4 @@
     <ProjectReference Include="..\core\Microlab.Core.csproj" />
   </ItemGroup>
 
-
-
 </Project>
