@@ -27,5 +27,15 @@ dotnet build
 dotnet test
 ```
 
+## CLI Usage
+
+The `ml85` tool can assemble and run programs, grade them against JSON specs, or export execution traces:
+
+```bash
+ml85 run program.8085 --entry 0x0000
+ml85 grade spec.json
+ml85 trace program.8085 --out trace.json
+```
+
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.

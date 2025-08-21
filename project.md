@@ -16,11 +16,11 @@
 - [x] Editor and assemble/run pipeline
 - [x] Registers/flags/memory views
 
-## Phase 3 – Teaching Tools 🚧
+## Phase 3 – Teaching Tools ✅
 - [x] CLI runner
 - [x] Autograder
-- [ ] Lab packs and sample programs
-- [ ] Trace export and state diffs
+- [x] Lab packs and sample programs
+- [x] Trace export and state diffs
 
 ## Phase 4 – Peripheral Plug-ins ⏳
 - [ ] 8255 PPI and basic widgets
