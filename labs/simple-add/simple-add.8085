@@ -1,0 +1,6 @@
+ORG 0
+MVI A,1
+MVI B,2
+ADD B
+HLT
+END

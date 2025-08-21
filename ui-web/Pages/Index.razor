@@ -1,0 +1,38 @@
+@page "/"
+@using Microlab.Core
+@using Microlab.Asm8085
+@using Microlab.IO
+
+<h1>MicroLab Web</h1>
+<textarea @bind="Source" rows="10" cols="40"></textarea>
+<br />
+<button @onclick="Run">Run</button>
+
+@if (Result != null)
+{
+    <p>A register: @Result</p>
+}
+
+@code {
+    private string Source = "MVI A,1\nADI 1\nHLT";
+    private string? Result;
+
+    private void Run()
+    {
+        try
+        {
+            var assembler = new Assembler();
+            var program = assembler.Assemble(Source);
+            var bus = new SystemBus(program, 0);
+            var cpu = new Cpu8085();
+            cpu.Reset();
+            while (!cpu.Halted)
+                cpu.Step(bus);
+            Result = $"0x{cpu.State.A:X2}";
+        }
+        catch (Exception ex)
+        {
+            Result = ex.Message;
+        }
+    }
+}

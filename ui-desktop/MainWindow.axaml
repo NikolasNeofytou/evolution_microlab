@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Microlab.UiDesktop"
+        x:Class="Microlab.UiDesktop.MainWindow"
+        Width="800" Height="600"
+        Title="MicroLab Simulator">
+    <StackPanel Margin="10">
+        <Button Content="Run" Click="OnRunClicked" HorizontalAlignment="Left"/>
+        <TextBox x:Name="CodeBox" AcceptsReturn="True" FontFamily="Consolas" Height="300"/>
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Spacing="20">
+            <StackPanel>
+                <TextBlock Text="Port B (input)" HorizontalAlignment="Center"/>
+                <local:DipSwitch x:Name="DipInput"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Port A (LEDs)" HorizontalAlignment="Center"/>
+                <local:LedArray x:Name="LedOutput"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Port C (7-seg)" HorizontalAlignment="Center"/>
+                <local:SevenSegmentDisplay x:Name="SegOutput"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock x:Name="OutputBlock" Margin="0,10,0,0" FontFamily="Consolas" TextWrapping="Wrap"/>
+    </StackPanel>
+</Window>
