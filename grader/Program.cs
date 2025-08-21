@@ -1,3 +1,4 @@
+
 using Microlab.Grader;
 using System.Text.Json;
 
@@ -102,4 +103,5 @@ var runResult = Runner.Run(sourceRun, entryRun, maxCyclesRun);
 var runCpu = runResult.Cpu;
 Console.WriteLine($"A={runCpu.State.A:X2} B={runCpu.State.B:X2} C={runCpu.State.C:X2} D={runCpu.State.D:X2} E={runCpu.State.E:X2} H={runCpu.State.H:X2} L={runCpu.State.L:X2} PC={runCpu.State.PC:X4} SP={runCpu.State.SP:X4}");
 Console.WriteLine($"Flags: S={(runCpu.State.S?1:0)} Z={(runCpu.State.Z?1:0)} AC={(runCpu.State.AC?1:0)} P={(runCpu.State.P?1:0)} CY={(runCpu.State.CY?1:0)}");
+
 
