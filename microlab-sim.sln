@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microlab.Core", "core\Microlab.Core.csproj", "{E670E698-A111-41FF-B82A-E070458FAEA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microlab.Asm8085", "asm8085\Microlab.Asm8085.csproj", "{764DB6C2-019B-4D2D-BAB7-4A853DB07D64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microlab.IO", "io\Microlab.IO.csproj", "{AEBA4E0F-64DA-495F-9F37-C3161BA092CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microlab.Grader", "grader\Microlab.Grader.csproj", "{DEB0226E-4E63-43F1-B9B8-9934A4C1268B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microlab.UiDesktop", "ui-desktop\Microlab.UiDesktop.csproj", "{D80E2523-0716-4CD4-A871-FD6FE7F857E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microlab.UiWeb", "ui-web\Microlab.UiWeb.csproj", "{3372B7E7-8F75-4A4A-8726-BA5830B169FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microlab.Tests", "tests\Microlab.Tests.csproj", "{9BBECAB2-9CEF-4F96-A687-AFA2BD64EAC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E670E698-A111-41FF-B82A-E070458FAEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E670E698-A111-41FF-B82A-E070458FAEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E670E698-A111-41FF-B82A-E070458FAEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E670E698-A111-41FF-B82A-E070458FAEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{764DB6C2-019B-4D2D-BAB7-4A853DB07D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{764DB6C2-019B-4D2D-BAB7-4A853DB07D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{764DB6C2-019B-4D2D-BAB7-4A853DB07D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{764DB6C2-019B-4D2D-BAB7-4A853DB07D64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEBA4E0F-64DA-495F-9F37-C3161BA092CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEBA4E0F-64DA-495F-9F37-C3161BA092CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEBA4E0F-64DA-495F-9F37-C3161BA092CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEBA4E0F-64DA-495F-9F37-C3161BA092CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB0226E-4E63-43F1-B9B8-9934A4C1268B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB0226E-4E63-43F1-B9B8-9934A4C1268B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB0226E-4E63-43F1-B9B8-9934A4C1268B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB0226E-4E63-43F1-B9B8-9934A4C1268B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D80E2523-0716-4CD4-A871-FD6FE7F857E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D80E2523-0716-4CD4-A871-FD6FE7F857E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D80E2523-0716-4CD4-A871-FD6FE7F857E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D80E2523-0716-4CD4-A871-FD6FE7F857E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3372B7E7-8F75-4A4A-8726-BA5830B169FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3372B7E7-8F75-4A4A-8726-BA5830B169FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3372B7E7-8F75-4A4A-8726-BA5830B169FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3372B7E7-8F75-4A4A-8726-BA5830B169FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BBECAB2-9CEF-4F96-A687-AFA2BD64EAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BBECAB2-9CEF-4F96-A687-AFA2BD64EAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BBECAB2-9CEF-4F96-A687-AFA2BD64EAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BBECAB2-9CEF-4F96-A687-AFA2BD64EAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
