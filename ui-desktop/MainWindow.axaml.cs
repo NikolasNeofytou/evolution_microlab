@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Microlab.Asm8085;
 using Microlab.Core;
+using Microlab.IO;
 using System;
 using System.Linq;
 
@@ -15,7 +16,7 @@ public partial class MainWindow : Window
 #if DEBUG
         this.AttachDevTools();
 #endif
-        CodeBox.Text = "ORG 0\nMVI A,1\nADI 1\nHLT\nEND";
+        CodeBox.Text = "ORG 0\nMVI A,1\nADI 1\nOUT 10H\nHLT\nEND";
     }
 
     private void OnRunClicked(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -24,12 +25,15 @@ public partial class MainWindow : Window
         try
         {
             var program = assembler.Assemble(CodeBox.Text ?? string.Empty);
-            var bus = new SimpleBus(program);
+            var ppi = new Ppi8255();
+            ppi.PortBInput = DipInput.Value;
+            var bus = new SystemBus(program, 0, new[] { ppi });
             var cpu = new Cpu8085();
             cpu.Reset();
             var cycles = 0;
             while (!cpu.Halted && cycles < 100000)
                 cycles += cpu.Step(bus);
+            LedOutput.Value = ppi.PortA;
             var regs = $"A={cpu.State.A:X2} B={cpu.State.B:X2} C={cpu.State.C:X2} D={cpu.State.D:X2} E={cpu.State.E:X2} H={cpu.State.H:X2} L={cpu.State.L:X2} PC={cpu.State.PC:X4} SP={cpu.State.SP:X4}";
             var flags = $"S={(cpu.State.S?1:0)} Z={(cpu.State.Z?1:0)} AC={(cpu.State.AC?1:0)} P={(cpu.State.P?1:0)} CY={(cpu.State.CY?1:0)}";
             var mem = string.Join(' ', bus.Memory.Take(16).Select(b => b.ToString("X2")));
@@ -39,19 +43,5 @@ public partial class MainWindow : Window
         {
             OutputBlock.Text = ex.Message;
         }
-    }
-
-    private class SimpleBus : IBus
-    {
-        private readonly byte[] _memory = new byte[ushort.MaxValue + 1];
-        public byte[] Memory => _memory;
-        public SimpleBus(byte[] program, ushort origin = 0)
-        {
-            Array.Copy(program, 0, _memory, origin, program.Length);
-        }
-        public byte ReadByte(ushort addr) => _memory[addr];
-        public void WriteByte(ushort addr, byte value) => _memory[addr] = value;
-        public byte InPort(byte port) => 0;
-        public void OutPort(byte port, byte value) { }
     }
 }

@@ -24,7 +24,7 @@
 
 ## Phase 4 – Peripheral Plug-ins ⏳
 - [x] 8255 PPI bus support
-- [ ] Basic UI widgets (LEDs, DIP)
+- [x] Basic UI widgets (LEDs, DIP)
 - [ ] Timers, keyboard/display controllers
 - [ ] Serial devices
 
