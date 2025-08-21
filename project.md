@@ -6,14 +6,14 @@
 - [x] Continuous integration
 - [x] CPU interfaces
 
-## Phase 1 – Core & Assembler MVP 🚧
+## Phase 1 – Core & Assembler MVP ✅
 - [x] Minimal 8085 CPU implementation
 - [x] Basic assembler with ORG/DB/END and core opcodes
 - [x] Golden test: `MVI A,1; ADI 1; HLT`
 
-## Phase 2 – Desktop UI MVP ⏳
-- [ ] Avalonia desktop shell
-- [ ] Editor and assemble/run pipeline
+## Phase 2 – Desktop UI MVP 🚧
+- [x] Avalonia desktop shell
+- [x] Editor and assemble/run pipeline
 - [ ] Registers/flags/memory views
 
 ## Phase 3 – Teaching Tools ⏳
