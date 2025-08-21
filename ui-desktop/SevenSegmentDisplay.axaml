@@ -1,0 +1,13 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Microlab.UiDesktop.SevenSegmentDisplay">
+    <Canvas Width="60" Height="100">
+        <Border x:Name="SegA" Width="40" Height="10" Background="Black" Canvas.Left="10" Canvas.Top="0"/>
+        <Border x:Name="SegB" Width="10" Height="40" Background="Black" Canvas.Left="50" Canvas.Top="10"/>
+        <Border x:Name="SegC" Width="10" Height="40" Background="Black" Canvas.Left="50" Canvas.Top="50"/>
+        <Border x:Name="SegD" Width="40" Height="10" Background="Black" Canvas.Left="10" Canvas.Top="90"/>
+        <Border x:Name="SegE" Width="10" Height="40" Background="Black" Canvas.Left="0" Canvas.Top="50"/>
+        <Border x:Name="SegF" Width="10" Height="40" Background="Black" Canvas.Left="0" Canvas.Top="10"/>
+        <Border x:Name="SegG" Width="40" Height="10" Background="Black" Canvas.Left="10" Canvas.Top="45"/>
+    </Canvas>
+</UserControl>

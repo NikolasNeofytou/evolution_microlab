@@ -16,6 +16,10 @@
                 <TextBlock Text="Port A (LEDs)" HorizontalAlignment="Center"/>
                 <local:LedArray x:Name="LedOutput"/>
             </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Port C (7-seg)" HorizontalAlignment="Center"/>
+                <local:SevenSegmentDisplay x:Name="SegOutput"/>
+            </StackPanel>
         </StackPanel>
         <TextBlock x:Name="OutputBlock" Margin="0,10,0,0" FontFamily="Consolas" TextWrapping="Wrap"/>
     </StackPanel>

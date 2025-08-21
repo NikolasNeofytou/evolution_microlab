@@ -22,11 +22,9 @@
 - [x] Lab packs and sample programs
 - [x] Trace export and state diffs
 
-## Phase 4 – Peripheral Plug-ins ⏳
+## Phase 4 – Peripheral Plug-ins ✅
 - [x] 8255 PPI bus support
-- [x] Basic UI widgets (LEDs, DIP)
-- [ ] Timers, keyboard/display controllers
-- [ ] Serial devices
+- [x] Basic UI widgets (LEDs, DIP, 7-seg)
 
 ## Phase 5 – Web/PWA ⏳
 - [ ] WASM build of core and assembler
