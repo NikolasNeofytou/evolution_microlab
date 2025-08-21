@@ -37,6 +37,14 @@ ml85 grade spec.json
 ml85 trace program.8085 --out trace.json
 ```
 
+## Web UI
+
+To run the browser-based interface during development:
+
+```bash
+dotnet run --project ui-web
+```
+
 ## Peripherals
 
 The simulator includes a pluggable bus for external devices. The initial implementation provides an Intel 8255 PPI that can

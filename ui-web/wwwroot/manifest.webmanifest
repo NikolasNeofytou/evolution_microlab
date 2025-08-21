@@ -1,0 +1,9 @@
+{
+  "name": "MicroLab Web",
+  "short_name": "MicroLab",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Web-based 8085 simulator",
+  "icons": []
+}

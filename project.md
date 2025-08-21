@@ -26,7 +26,7 @@
 - [x] 8255 PPI bus support
 - [x] Basic UI widgets (LEDs, DIP, 7-seg)
 
-## Phase 5 – Web/PWA ⏳
-- [ ] WASM build of core and assembler
-- [ ] Browser UI shell
-- [ ] PWA packaging
+## Phase 5 – Web/PWA ✅
+- [x] WASM build of core and assembler
+- [x] Browser UI shell
+- [x] PWA packaging
