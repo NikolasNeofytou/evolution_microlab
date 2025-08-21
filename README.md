@@ -50,5 +50,4 @@ dotnet run --project ui-web
 The simulator includes a pluggable bus for external devices. The initial implementation provides an Intel 8255 PPI that can
 be mapped to I/O ports for simple LED, switch, or seven‑segment display experiments.
 
-## Contributing
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+

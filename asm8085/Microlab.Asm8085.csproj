@@ -6,8 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+
   <ItemGroup>
     <ProjectReference Include="..\core\Microlab.Core.csproj" />
   </ItemGroup>
+
+
 
 </Project>
