@@ -18,7 +18,7 @@
 
 ## Phase 3 – Teaching Tools 🚧
 - [x] CLI runner
-- [ ] Autograder
+- [x] Autograder
 - [ ] Lab packs and sample programs
 - [ ] Trace export and state diffs
 

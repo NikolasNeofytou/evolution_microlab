@@ -15,7 +15,7 @@ ADI 1
 HLT
 END
 """;
-        var cpu = Runner.Run(source);
-        Assert.Equal(2, cpu.State.A);
+        var result = Runner.Run(source);
+        Assert.Equal(2, result.Cpu.State.A);
     }
 }
