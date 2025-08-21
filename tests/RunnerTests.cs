@@ -1,4 +1,6 @@
 using Microlab.Grader;
+using Microlab.IO;
+using System.Linq;
 using Xunit;
 
 namespace Microlab.Tests;
@@ -35,5 +37,21 @@ END
         Assert.Equal(0x3E, result.Trace[0].Op);
         Assert.Equal(2, result.Cpu.State.A);
         Assert.Empty(result.MemoryDiff);
+    }
+
+    [Fact]
+    public void RunWithPeripheralCapturesPortWrite()
+    {
+        var source = """
+ORG 0
+MVI A,0AAH
+OUT 10H
+HLT
+END
+""";
+        var ppi = new Ppi8255();
+        var result = Runner.Run(source, peripherals: new[] { ppi });
+        Assert.Contains((byte)0x10, result.PortWrites.Select(p => p.Port));
+        Assert.Equal(0xAA, ppi.PortA);
     }
 }

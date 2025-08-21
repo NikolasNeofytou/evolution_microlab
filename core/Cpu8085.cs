@@ -80,6 +80,18 @@ public class Cpu8085 : ICpu8085
                 State.PC = (ushort)(lo | (hi << 8));
                 return 10;
             }
+            case 0xD3: // OUT port
+            {
+                byte port = bus.ReadByte(State.PC++);
+                bus.OutPort(port, State.A);
+                return 10;
+            }
+            case 0xDB: // IN port
+            {
+                byte port = bus.ReadByte(State.PC++);
+                State.A = bus.InPort(port);
+                return 10;
+            }
             case 0x76: // HLT (should be caught above but keep)
                 Halted = true;
                 return 7;

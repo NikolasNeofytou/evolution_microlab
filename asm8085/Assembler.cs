@@ -49,7 +49,7 @@ public class Assembler
             pc += op switch
             {
                 "DB" => (ushort)1,
-                "MVI" or "ADI" => (ushort)2,
+                "MVI" or "ADI" or "OUT" or "IN" => (ushort)2,
                 "JMP" => (ushort)3,
                 "END" => (ushort)0,
                 _ => (ushort)1,
@@ -104,6 +104,20 @@ public class Assembler
                 case "ADI":
                 {
                     output.Add(0xC6);
+                    output.Add((byte)ParseNumberOrLabel(operands[0], symbols));
+                    pc += 2;
+                    break;
+                }
+                case "OUT":
+                {
+                    output.Add(0xD3);
+                    output.Add((byte)ParseNumberOrLabel(operands[0], symbols));
+                    pc += 2;
+                    break;
+                }
+                case "IN":
+                {
+                    output.Add(0xDB);
                     output.Add((byte)ParseNumberOrLabel(operands[0], symbols));
                     pc += 2;
                     break;

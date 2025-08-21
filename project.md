@@ -23,7 +23,8 @@
 - [x] Trace export and state diffs
 
 ## Phase 4 – Peripheral Plug-ins ⏳
-- [ ] 8255 PPI and basic widgets
+- [x] 8255 PPI bus support
+- [ ] Basic UI widgets (LEDs, DIP)
 - [ ] Timers, keyboard/display controllers
 - [ ] Serial devices
 
