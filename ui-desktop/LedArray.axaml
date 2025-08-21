@@ -1,0 +1,14 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Microlab.UiDesktop.LedArray">
+    <StackPanel Orientation="Horizontal">
+        <Border x:Name="Led0" Width="20" Height="20" Margin="2" Background="Black"/>
+        <Border x:Name="Led1" Width="20" Height="20" Margin="2" Background="Black"/>
+        <Border x:Name="Led2" Width="20" Height="20" Margin="2" Background="Black"/>
+        <Border x:Name="Led3" Width="20" Height="20" Margin="2" Background="Black"/>
+        <Border x:Name="Led4" Width="20" Height="20" Margin="2" Background="Black"/>
+        <Border x:Name="Led5" Width="20" Height="20" Margin="2" Background="Black"/>
+        <Border x:Name="Led6" Width="20" Height="20" Margin="2" Background="Black"/>
+        <Border x:Name="Led7" Width="20" Height="20" Margin="2" Background="Black"/>
+    </StackPanel>
+</UserControl>

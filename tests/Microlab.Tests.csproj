@@ -22,4 +22,11 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\core\Microlab.Core.csproj" />
+    <ProjectReference Include="..\asm8085\Microlab.Asm8085.csproj" />
+    <ProjectReference Include="..\grader\Microlab.Grader.csproj" />
+    <ProjectReference Include="..\io\Microlab.IO.csproj" />
+  </ItemGroup>
+
 </Project>

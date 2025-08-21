@@ -1,0 +1,14 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Microlab.UiDesktop.DipSwitch">
+    <StackPanel Orientation="Horizontal">
+        <CheckBox x:Name="Sw7" Content="7" Margin="2"/>
+        <CheckBox x:Name="Sw6" Content="6" Margin="2"/>
+        <CheckBox x:Name="Sw5" Content="5" Margin="2"/>
+        <CheckBox x:Name="Sw4" Content="4" Margin="2"/>
+        <CheckBox x:Name="Sw3" Content="3" Margin="2"/>
+        <CheckBox x:Name="Sw2" Content="2" Margin="2"/>
+        <CheckBox x:Name="Sw1" Content="1" Margin="2"/>
+        <CheckBox x:Name="Sw0" Content="0" Margin="2"/>
+    </StackPanel>
+</UserControl>

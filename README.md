@@ -27,5 +27,27 @@ dotnet build
 dotnet test
 ```
 
-## Contributing
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## CLI Usage
+
+The `ml85` tool can assemble and run programs, grade them against JSON specs, or export execution traces:
+
+```bash
+ml85 run program.8085 --entry 0x0000
+ml85 grade spec.json
+ml85 trace program.8085 --out trace.json
+```
+
+## Web UI
+
+To run the browser-based interface during development:
+
+```bash
+dotnet run --project ui-web
+```
+
+## Peripherals
+
+The simulator includes a pluggable bus for external devices. The initial implementation provides an Intel 8255 PPI that can
+be mapped to I/O ports for simple LED, switch, or seven‑segment display experiments.
+
+

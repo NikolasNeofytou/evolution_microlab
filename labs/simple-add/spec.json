@@ -1,0 +1,8 @@
+{
+  "program": "simple-add.8085",
+  "entry": 0,
+  "maxCycles": 1000,
+  "expect": {
+    "registers": {"A": "0x03"}
+  }
+}
